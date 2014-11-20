@@ -11,7 +11,7 @@ RUN apt-get install -y \
  && apt-get clean
 
 COPY sudoers /etc/sudoers
-RUN chmod 0660 /etc/sudoers
+RUN chmod 0440 /etc/sudoers
 RUN useradd -m -G sudo buzzy
 USER buzzy
 CMD ["/bin/bash"]
