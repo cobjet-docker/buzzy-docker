@@ -13,4 +13,6 @@ COPY sudoers /etc/sudoers
 RUN chmod 0660 /etc/sudoers
 RUN useradd -m -G wheel buzzy
 USER buzzy
+ENV HOME /home/buzzy
+WORKDIR /home/buzzy
 CMD ["/bin/bash"]
