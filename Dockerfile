@@ -14,4 +14,6 @@ COPY sudoers /etc/sudoers
 RUN chmod 0440 /etc/sudoers
 RUN useradd -m -G sudo buzzy
 USER buzzy
+ENV HOME /home/buzzy
+WORKDIR /home/buzzy
 CMD ["/bin/bash"]
