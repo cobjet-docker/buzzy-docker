@@ -15,4 +15,5 @@ RUN chmod 0660 /etc/sudoers
 RUN useradd -d /home/buzzy -m -G wheel buzzy
 USER buzzy
 ENV HOME /home/buzzy
+WORKDIR /home/buzzy
 CMD ["/bin/bash"]
