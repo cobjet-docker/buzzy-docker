@@ -5,4 +5,5 @@ RUN sudo apt-get install -y curl \
  && sudo dpkg -i buzzy_*.deb \
  && sudo apt-get install -y -f \
  && sudo apt-get clean \
- && rm buzzy_*.deb
+ && rm buzzy_*.deb \
+ && mkdir -p /home/buzzy/.cache/buzzy
